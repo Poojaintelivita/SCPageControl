@@ -59,6 +59,7 @@ import UIKit
             scp_scjaflatbar.set_view(page, current: current, current_color: current_color)
             self.addSubview(scp_scjaflatbar)
         default: //.SCNormal
+            self.subviews.forEach({ $0.removeFromSuperview() }) // Added by Pooja Arora
             let scp_normal = SCP_SCNormal(frame: viewFrame)
             scp_normal.tag = scp_style.rawValue
             scp_normal.set_view(page, current: current, current_color: current_color)
