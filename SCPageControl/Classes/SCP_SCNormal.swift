@@ -45,7 +45,7 @@ class SCP_SCNormal: UIView {
         var f_x: CGFloat = (self.frame.size.width-f_all_width)/2.0, f_y: CGFloat = (self.frame.size.height-f_height)/2.0
         
         f_start_point = f_x
-        
+        self.subviews.forEach({ $0.removeFromSuperview() }) // Added by Pooja Arora
         for i in 0 ..< numberOfPage {
             let img_page = UIImageView()
             
